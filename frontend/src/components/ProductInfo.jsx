@@ -70,12 +70,14 @@ const ProductInfoCard = () => {
         console.log('User ID:', user.id);
         console.log('Product ID:', productId);
         try {
-          
+          const token = localStorage.getItem('token');
           console.log(typeof(user.id));
           const response = await axios.put('http://localhost:3001/api/user/cart', {
             userId: user.id,
             productId: productId,
             quantity: quantity
+          },{
+            headers: { Authorization: `Bearer ${token}` },
           });
           console.log('Product added to cart:', response.data);
           // Fetch updated cart items

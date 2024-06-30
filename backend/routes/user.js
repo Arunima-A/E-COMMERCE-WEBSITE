@@ -74,6 +74,7 @@ router.get('/me', authMiddleware, async (req, res) => {
 });
 
 router.put('/cart', authMiddleware, async (req, res) => {
+  console.log('Inside put logic');
   const { userId, productId, quantity } = req.body;
   console.log(typeof(quantity));
   console.log('Received userId:', userId);
