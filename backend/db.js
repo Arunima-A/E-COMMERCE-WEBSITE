@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://arunima2:Aru%400412@cluster0.f7hy09r.mongodb.net/ecommerce`', {
+mongoose.connect('your-mongodb-url', {
     }).then(() => {
     console.log('Connected to the database');
 }).catch((err) => {
